@@ -1,0 +1,12 @@
+[Unit]
+Description=DMF7 Auto Heal Service
+After=docker.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dmf7-heal
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

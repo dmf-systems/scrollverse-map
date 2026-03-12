@@ -1,0 +1,36 @@
+#!/bin/bash
+
+case "$1" in
+
+status)
+dmf7-status
+;;
+
+restart)
+dmf7-restart
+;;
+
+backup)
+dmf7-backup
+;;
+
+update)
+dmf7-update
+;;
+
+ai)
+dmf7-ai-test
+;;
+
+*)
+
+echo "DMF7 COMMANDS:"
+echo ""
+echo "dmf7 status"
+echo "dmf7 restart"
+echo "dmf7 backup"
+echo "dmf7 update"
+echo "dmf7 ai"
+;;
+
+esac
