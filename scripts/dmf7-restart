@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Restarting DMF7 services..."
+
+docker restart redis-ai
+docker restart qdrant
+docker restart neo4j
+docker restart ollama
+docker restart grafana
+docker restart portainer
+
+pm2 restart all
+
+systemctl restart nginx
+
+echo "DMF7 restart complete"
