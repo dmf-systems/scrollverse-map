@@ -1,0 +1,22 @@
+#!/bin/bash
+echo "===== DMF7 NODE STATUS ====="
+echo ""
+echo "PM2 SERVICES:"
+pm2 list
+echo ""
+echo "DOCKER CONTAINERS:"
+docker ps
+echo ""
+echo "SYSTEM LOAD:"
+uptime
+echo ""
+echo "MEMORY:"
+free -h
+echo ""
+echo "DISK:"
+df -h
+echo ""
+echo "NGINX:"
+systemctl status nginx --no-pager
+echo ""
+echo "============================"
