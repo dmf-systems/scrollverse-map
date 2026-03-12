@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DATE=$(date +%F-%H%M)
+
+mkdir -p /opt/dmf7/snapshots
+
+tar -czf /opt/dmf7/snapshots/dmf7-$DATE.tar.gz \
+/root/DMF7 \
+/opt/dmf7 \
+/var/lib/docker
+
+echo "Snapshot created: dmf7-$DATE"

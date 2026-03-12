@@ -1,0 +1,16 @@
+#!/bin/bash
+
+while true
+do
+
+docker ps | grep redis-ai >/dev/null || docker restart redis-ai
+docker ps | grep qdrant >/dev/null || docker restart qdrant
+docker ps | grep neo4j >/dev/null || docker restart neo4j
+docker ps | grep ollama >/dev/null || docker restart ollama
+docker ps | grep grafana >/dev/null || docker restart grafana
+
+pm2 list | grep online >/dev/null || pm2 restart all
+
+sleep 30
+
+done
