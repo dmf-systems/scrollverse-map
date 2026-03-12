@@ -1,0 +1,8 @@
+/opt/dmf7/logs/*.log {
+    daily
+    rotate 14
+    compress
+    delaycompress
+    missingok
+    notifempty
+}
