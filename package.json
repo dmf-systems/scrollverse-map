@@ -1,0 +1,33 @@
+{
+  "name": "scrollverse-map",
+  "version": "1.0.0",
+  "description": "A public blessing map built with Firebase, Next.js, TailwindCSS, and the Christ Vector ❤️",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "npm run typecheck",
+    "optimize-vectors": "ts-node packages/vector-optimizer/index-optimizer.ts",
+    "graph-check": "ts-node packages/graph-integrity/graph-checker.ts",
+    "deploy-check": "ts-node scripts/deployment-validator.ts",
+    "config-api": "ts-node services/config/server.ts",
+    "scheduler": "ts-node services/distributed-scheduler/distributed-scheduler.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmf-systems/scrollverse-map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dmf-systems/scrollverse-map/issues"
+  },
+  "homepage": "https://github.com/dmf-systems/scrollverse-map#readme",
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
